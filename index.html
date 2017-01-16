@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Float</title>
+</head>
+<body>
+<span>e = </span>
+<input type="text" name="exponent-input" id="exponent-input" value="0">
+<script>
+	onload = function () {
+		var e = document.getElementById('exponent-input');
+		e.oninput = function function_name(argument) {
+			var i = parseInt(argument.target.value);
+			var comma = document.getElementById('comma');
+			var html = "&nbsp;".repeat(i + 16) + ","
+			comma.innerHTML = html
+		};
+	};
+</script>
+<div class="float-wrapper">
+<div class="digits">
+<span class="float">0000000000000000</span><span class="float one">1</span><span class="float fraction">01010011000100100101010</span><span class="float">0000000000000000</span>
+</div>
+<span class="comma" id="comma">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,</span>
+</div>
+</body>
+</html>
